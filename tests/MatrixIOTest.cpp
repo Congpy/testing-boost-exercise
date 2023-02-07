@@ -9,8 +9,7 @@ BOOST_AUTO_TEST_SUITE(MatrixIOTests)
 
 BOOST_AUTO_TEST_CASE(printData)
 {
-  MatrixXd A;
-  MatrixXd expectedA;
+  MatrixXd A, expectedA;
   std::string test;
 
   A = MatrixXd(3, 3);
