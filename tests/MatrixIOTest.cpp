@@ -10,12 +10,11 @@ BOOST_AUTO_TEST_SUITE(MatrixIOTests)
 BOOST_AUTO_TEST_CASE(printData)
 {
   std::string test;
-
-  A = MatrixXd(3,3);
+  MatrixXd A(3,3), expectedA;
+  
   A << 1, 2, 3,
     4, 5, 6,
     7, 8, 9;
-  expectedA = MatrixXd(3,3);
 
   matrixIO::saveData("../csvText.csv", A);
   expectedA = matrixIO::openData("../csvText.csv", 3);
