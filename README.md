@@ -2,7 +2,7 @@
 
 # SIDEMADE - Simple Dense Matrix Decomposition
 
-A simple demo code to read dense matrices from files and solve linear systems with them.
+A simple demo code to read dense matrices from files and solve linear systems with them. 
 
 ## Folder Structure
 
