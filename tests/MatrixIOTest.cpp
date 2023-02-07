@@ -11,12 +11,14 @@ BOOST_AUTO_TEST_CASE(printData)
 {
   std::string test;
 
-  MatrixXd A(3,3) << 1, 2, 3,
-                     4, 5, 6,
-                     7, 8, 9;
+  A = MatrixXd(3,3);
+  A << 1, 2, 3,
+    4, 5, 6,
+    7, 8, 9;
+  expectedA = MatrixXd(3,3);
 
   matrixIO::saveData("../csvText.csv", A);
-  MatrixXd expectedA(3,3) = matrixIO::openData("../csvText.csv", 3);
+  expectedA = matrixIO::openData("../csvText.csv", 3);
 
   for (int i = 0; i < 3; i++) {
     for (int j = 0; j < 3; j++) {
